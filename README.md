@@ -25,25 +25,25 @@ This is a C library that provides simple functions to parse CSV data, manipulate
 Clone the project
 
 ```bash
-    git clone https://codeberg.org/luizvilasboas/libcsv.git
+git clone https://codeberg.org/luizvilasboas/libcsv.git
 ```
 
 Go to the project directory
 
 ```bash
-    cd libcsv
+cd libcsv
 ```
 
 Compile the library
 
 ```bash
-    make
+make
 ```
 
 Install the library
 
 ```bash
-    sudo make install
+sudo make install
 ```
 
 ## Usage/Examples
@@ -87,7 +87,7 @@ int main() {
 To run tests, run the following command
 
 ```bash
-  make test
+make test
 ```
 
 ## Contributing
