@@ -1,0 +1,23 @@
+name: Build and Test
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  build-and-test:
+    runs-on: debian-laptop
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential check valgrind clang-format
+      - name: Lint
+        run: make lint
+      - name: Build
+        run: make all
+      - name: Test
+        run: make test
+      - name: Check leaks
+        run: make leak
