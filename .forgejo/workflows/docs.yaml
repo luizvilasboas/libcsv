@@ -19,7 +19,7 @@ jobs:
           TOKEN: ${{ secrets.CODEBERG_TOKEN }}
         run: |
           git config user.name "forgejo-runner[bot]"
-          git config global user.email "runner@noreply.codeberg.org"
+          git config user.email "runner@noreply.codeberg.org"
 
           TMP_DOCS=$(mktemp -d)
           cp -r html/* "$TMP_DOCS/"
