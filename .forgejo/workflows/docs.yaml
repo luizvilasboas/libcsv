@@ -45,5 +45,3 @@ jobs:
             git commit -m "docs: generating documentation from ${GITHUB_REF_NAME}"
             git push https://${TOKEN}@codeberg.org/${GITHUB_REPOSITORY}.git pages
           fi
-
-          git checkout -
