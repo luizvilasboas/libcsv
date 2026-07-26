@@ -22,7 +22,7 @@ jobs:
           git config user.email "runner@noreply.codeberg.org"
 
           TMP_DOCS=$(mktemp -d)
-          cp -r html/* "$TMP_DOCS/"
+          cp -r docs/html/* "$TMP_DOCS/"
 
           git fetch origin
           if git rev-parse --verify origin/pages >/dev/null 2>&1; then
