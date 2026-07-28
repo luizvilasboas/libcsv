@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   build-and-deploy-docs:
-    runs-on: debian-laptop
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
