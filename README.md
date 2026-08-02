@@ -53,7 +53,6 @@ sudo make install
 #include <libcsv.h>
 
 int main() {
-    // Create a CSVParser to read a CSV file
     CSVParser *parser = csv_parser_create("example.csv", ',');
 
     if (!parser) {
@@ -61,17 +60,14 @@ int main() {
         return 1;
     }
 
-    // Read rows from the CSV file
     CSVRow *row;
     while ((row = csv_read_row(parser)) != NULL) {
         for (int i = 0; i < row->field_count; i++) {
             printf("Field %d: %s\n", i, csv_get_field(row, i));
         }
-        // Don't forget to free the row
         csv_row_destroy(row);
     }
 
-    // Clean up the parser
     csv_parser_destroy(parser);
 
     return 0;
